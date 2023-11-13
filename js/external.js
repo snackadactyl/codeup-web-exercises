@@ -18,14 +18,15 @@ alert(`Great, ${userInput} is my favorite color too!`);
 
 
 
-// var dailyRentalRate = Number(prompt("How much is the daily rental rate?"));
+let dailyRentalRate = Number(prompt("How much is the daily rental rate?"));
 let dailyRentalRate = parseInt(prompt("How much is the daily rental rate?"));
 let mermaidDaysRented = Number(prompt("How many days would you like to rent 'The Little Mermaid'?"));
 let brotherBearRented = Number(prompt("How many days would you like to rent 'Brother Bear'?"));
 let herculesRented = Number(prompt("How many days would you like to rent 'Hercules'?"));
 let totalCost = (mermaidDaysRented + brotherBearRented + herculesRented) * dailyRentalRate;
 let alertMsgRental = ("You owe $" + totalCost );
-alert(alertMsgRental);
+consolue.log(totalCost);
+alert('Your total cost is $' + totalCost + ' for selected items.');
 
 //Paycheck question
 
