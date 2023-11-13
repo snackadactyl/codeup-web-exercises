@@ -74,6 +74,13 @@ console.log(isTwo(3));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+let calculateTip = function(tipPercent, billTotal) {
+    return tipPercent * billTotal;
+}
+console.log(calculateTip(.20, 20));
+console.log(calculateTip(.25, 25.50));
+console.log(calculateTip(.15, 33.42));
+
 
 /**
  * TODO:
