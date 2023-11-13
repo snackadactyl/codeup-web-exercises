@@ -19,10 +19,23 @@ console.log(`Great, ${userInput} is my favorite color too!`);
 
 
 // var dailyRentalRate = Number(prompt("How much is the daily rental rate?"));
-var dailyRentalRate = parseInt(prompt("How much is the daily rental rate?"));
-var mermaidDaysRented = Number(prompt("How many days would you like to rent 'The Little Mermaid'?"));
-var brotherBearRented = Number(prompt("How many days would you like to rent 'Brother Bear'?"));
-var herculesRented = Number(prompt("How many days would you like to rent 'Hercules'?"));
-var totalCost = (mermaidDaysRented + brotherBearRented + herculesRented) * dailyRentalRate;
-var alertMsgRental = ("You owe $" + totalCost );
+let dailyRentalRate = parseInt(prompt("How much is the daily rental rate?"));
+let mermaidDaysRented = Number(prompt("How many days would you like to rent 'The Little Mermaid'?"));
+let brotherBearRented = Number(prompt("How many days would you like to rent 'Brother Bear'?"));
+let herculesRented = Number(prompt("How many days would you like to rent 'Hercules'?"));
+let totalCost = (mermaidDaysRented + brotherBearRented + herculesRented) * dailyRentalRate;
+let alertMsgRental = ("You owe $" + totalCost );
 alert(alertMsgRental);
+
+//Paycheck question
+
+let googleRate = Number(prompt("What is your google rate per hour?"));
+let amazonRate = Number(prompt("What is your amazon rate per hour?"));
+let facebookRate = Number(prompt("What is your facebook rate per hour?"));
+let googleHours = Number(prompt("How many hours did you work at google?"));
+let amazonHours = Number(prompt("How many hours did you work at amazon?"));
+let facebookHours = Number(prompt("How many hours did you work at facebook?"));
+
+let totalPay= (googleRate * googleHours) + (amazonRate * amazonHours) + (facebookRate * facebookHours);
+let alertPay = "Your total pay is: $" + totalPay;
+alert(alertPay);
