@@ -26,7 +26,6 @@ let totalCost = (mermaidDaysRented + brotherBearRented + herculesRented) * daily
 let alertMsgRental = ("You owe $" + totalCost );
 alert(alertMsgRental);
 
-//Paycheck question
 
 let googleRate = Number(prompt("What is your google rate per hour?"));
 let amazonRate = Number(prompt("What is your amazon rate per hour?"));
