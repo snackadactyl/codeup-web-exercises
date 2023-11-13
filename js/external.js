@@ -3,7 +3,7 @@ console.log('Hello from external JavaScript!');
 alert("Welcome to my Website!");
 
 let userInput = prompt('What is your favorite color:')
-console.log(`Great, ${userInput} is my favorite color too!`);
+alert(`Great, ${userInput} is my favorite color too!`);
 
 // Write some JavaScript code, that is, variables and operators, to describe the following scenarios.
 // Do not worry about the real operations to get the values, the goal of these exercises is to understand how real
