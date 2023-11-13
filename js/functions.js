@@ -16,12 +16,12 @@
  *
  * console.log 'helloMessage' to check your work
  */
-function sayHello(name) {
+function helloMessage (name) {
     return "Hello" + name + "!"
 }
-console.log(sayHello("Katie"));
-console.log(sayHello("Ariel"));
-console.log(sayHello("Brand"));
+console.log(helloMessage(" Katie"));
+console.log(helloMessage(" Ariel"));
+console.log(helloMessage(" Brand"));
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
