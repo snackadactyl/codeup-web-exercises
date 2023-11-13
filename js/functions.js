@@ -106,3 +106,14 @@ console.log(amountToTip);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+let applyDiscount = function (price, discountPercentage){
+    var discountAmount = price * discountPercentage;
+    return price - discountAmount;
+}
+let originalPrice = 100;
+let discountPercentage = .2; // 20%
+
+console.log(applyDiscount(originalPrice, discountPercentage));
+console.log(applyDiscount(45.99, 0.12));
+console.log(applyDiscount(60, 0.12));
