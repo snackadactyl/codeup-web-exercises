@@ -25,6 +25,21 @@
  * console.logging the function's return value
  */
 
+// function analyzeColor(color) {
+//     if (color === "red") {
+//         return "Strawberries are red";
+//     } else if (color === "blue") {
+//         return "Blueberries are blue";
+//     } else if (color === "black") {
+//         return "Blackberries are black";
+//     } else {
+//         return "I don't know the other colors:" + color;
+//     }
+// }
+
+// console.log(analyzeColor("red"));
+// console.log(analyzeColor('seafoam'));
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -37,12 +52,43 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+// function analyzeColor(color) {
+//     if (color === "red") {
+//         return "Strawberries are red";
+//     } else if (color === "blue") {
+//         return "Blueberries are blue";
+//     } else if (color === "black") {
+//         return "Blackberries are black";
+//     } else {
+//         return "I don't know the other colors:" + color;
+//     }
+// }
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+function analyzeColor(color) {
+    switch (color) {
+        case "blue":
+            return("Blue is for blueberries");
 
+        case "red":
+            return("Red is for raspberries");
+
+        case "black":
+            return("Black is for blackberries");
+
+        default:
+            return((color) + ": The color you entered isn't here, but it's fine.");
+    }
+}
+
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("red"));
+console.log(analyzeColor("black"));
+console.log(analyzeColor("yellow"));
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -52,12 +98,20 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /* ########################################################################## */
 
+let userColor = prompt('Enter your fav color:');
+alert(analyzeColor(userColor));
+
+// console.log(`The user entered ${userColor}`)
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+ * generated "lucky number" between 0 and 5.
+ * If your lucky number is 0 you have no discount,
+ * if your lucky number is 1 you'll get a 10% discount,
+ * if it's 2,the discount is 25%,
+ * if it's 3, 35%,
+ * if it's 4, 50%,
+ * and if it's 5 you'll get
  * everything for free!.
  *
  * Write a function named `calculateTotal` which accepts a lucky number and total
@@ -71,7 +125,29 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+function calculateTotal (luckyNumber, totalAmount) {
+    let discount = 0;
+    if (luckyNumber === 0) {
+        discount = 0;
+    } else if (luckyNumber === 1) {
+        discount = .10;
+    } else if (luckyNumber === 2) {
+        discount = .20;
+    } else if (luckyNumber === 3) {
+        discount = .35;
+    } else if (luckyNumber === 4) {
+        discount = .50;
+    } else if (luckyNumber === 5) {
+        discount = 1.0;
+    }
+    return totalAmount * (1 - discount);
+}
+console.log(calculateTotal(0,100))
+console.log(calculateTotal(1,100))
+console.log(calculateTotal(2,100))
+console.log(calculateTotal(3,100))
+console.log(calculateTotal(4,100))
+console.log(calculateTotal(5,100))
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
