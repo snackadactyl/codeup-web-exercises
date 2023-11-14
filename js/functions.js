@@ -11,6 +11,7 @@
 function sayHello(name) {
     return "Hello" + name + "!"
 }
+
 console.log(sayHello(" Katie"));
 console.log(sayHello(" Ariel"));
 console.log(sayHello(" Brand"));
@@ -108,7 +109,7 @@ console.log(amountToTip);
  */
 
 let applyDiscount = function (price, discountPercentage){
-    var discountAmount = price * discountPercentage;
+    let discountAmount = price * discountPercentage;
     return price - discountAmount;
 }
 let originalPrice = 100;
