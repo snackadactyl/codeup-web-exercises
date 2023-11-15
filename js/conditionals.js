@@ -5,12 +5,9 @@
 /**
  * TODO:
  * Create a function named `analyzeColor`
- * that accepts a string
- * that is a color name as input.
- * This function should return a message which relates to the
- * color stated in the argument of the function.
- * For colors you do not have
- * responses written for, return a string stating so
+ * that accepts a string that is a color name as input.
+ * This function should return a message which relates to the color stated in the argument of the function.
+ * For colors you do not have responses written for, return a string stating so
  *
  * Example:
  *  > analyzeColor('blue') // returns "blue is the color of the sky"
@@ -25,6 +22,7 @@
  * console.logging the function's return value
  */
 
+//
 // function analyzeColor(color) {
 //     if (color === "red") {
 //         return "Strawberries are red";
@@ -36,7 +34,7 @@
 //         return "I don't know the other colors:" + color;
 //     }
 // }
-
+//
 // console.log(analyzeColor("red"));
 // console.log(analyzeColor('seafoam'));
 
@@ -52,6 +50,8 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+
+
 // function analyzeColor(color) {
 //     if (color === "red") {
 //         return "Strawberries are red";
@@ -85,21 +85,30 @@ function analyzeColor(color) {
     }
 }
 
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("red"));
-console.log(analyzeColor("black"));
-console.log(analyzeColor("yellow"));
+// console.log(analyzeColor("blue"));
+// console.log(analyzeColor("red"));
+// console.log(analyzeColor("black"));
+// console.log(analyzeColor("yellow"));
 /**
  * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
+ * Prompt the user for a color when the page loads,
+ * and pass the input from the user to your `analyzeColor` function.
+ * Alert the return value from your
  * function to show it to the user.
  */
 
 /* ########################################################################## */
+//
 
-let userColor = prompt('Enter your fav color:');
+const userColor = prompt("Enter a color please");
+analyzeColor(userColor);
 alert(analyzeColor(userColor));
+
+console.log(`User entered ${userColor}`)
+
+
+// let userColor = prompt('Enter your fav color:');
+// alert(analyzeColor(userColor));
 
 // console.log(`The user entered ${userColor}`)
 /**
@@ -125,29 +134,60 @@ alert(analyzeColor(userColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal (luckyNumber, totalAmount) {
-    let discount = 0;
-    if (luckyNumber === 0) {
-        discount = 0;
-    } else if (luckyNumber === 1) {
-        discount = .10;
-    } else if (luckyNumber === 2) {
-        discount = .20;
-    } else if (luckyNumber === 3) {
-        discount = .35;
-    } else if (luckyNumber === 4) {
-        discount = .50;
-    } else if (luckyNumber === 5) {
-        discount = 1.0;
+
+
+
+//
+// function calculateTotal (luckyNumber, totalAmount) {
+//     let discount = 0;
+//     if (luckyNumber === 0) {
+//         discount = 0;
+//     } else if (luckyNumber === 1) {
+//         discount = .10;
+//     } else if (luckyNumber === 2) {
+//         discount = .20;
+//     } else if (luckyNumber === 3) {
+//         discount = .35;
+//     } else if (luckyNumber === 4) {
+//         discount = .50;
+//     } else if (luckyNumber === 5) {
+//         discount = 1.0;
+//     }
+//     return totalAmount * (1 - discount);
+// }
+// console.log(calculateTotal(0,100))
+// console.log(calculateTotal(1,1030))
+// console.log(calculateTotal(2,24))
+// console.log(calculateTotal(3,84))
+// console.log(calculateTotal(4,248))
+// console.log(calculateTotal(5,24))
+
+
+function calculateTotal(luckyNumber, totalAmount) {
+    switch (luckyNumber) {
+        case 0:
+            return totalAmount;
+        case 1:
+            return .1
+        case 2:
+            return .2
+        case 3:
+            return .35
+        case 4:
+            return .5
+        case 5:
+            return 1
+        default:
+            return 'Incorrect Lucky Number'
     }
-    return totalAmount * (1 - discount);
 }
+
 console.log(calculateTotal(0,100))
-console.log(calculateTotal(1,100))
-console.log(calculateTotal(2,100))
-console.log(calculateTotal(3,100))
-console.log(calculateTotal(4,100))
-console.log(calculateTotal(5,100))
+console.log(calculateTotal(1,1030))
+console.log(calculateTotal(2,24))
+console.log(calculateTotal(3,84))
+console.log(calculateTotal(4,248))
+console.log(calculateTotal(5,24))
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -157,27 +197,44 @@ console.log(calculateTotal(5,100))
  * and alerts to display to the user what their lucky number was,
  * what their price before the discount was,
  * and what their price after the discount is.
- */
-Generate a random number between 0 and 6
+//  */
+// Generate a random number between 0 and 6
 const luckyNumber = Math.floor(Math.random() * 6);
 
-prompt('Enter your total bill:');
 
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * Do *NOT* display any of the above information
- * if the user enters a value that is not of the number data type.
- * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
- * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
- */
+const userTotal = prompt("Enter your total amount");
+const totalAfterDiscount = calculateTotal(luckyNumber, userTotal);
+alert(`Your lucky number is ${luckyNumber}`)
+alert(`The price before discount is $${userTotal}`)
+alert(`The price after discount is $${totalAfterDiscount}`)
+
+
+// /**
+//  * TODO:
+//  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+//  * would like to enter a number. If they click 'Ok', prompt the user for a
+//  * number, then use 3 separate alerts to tell the user:
+//  *
+//  * - whether the number is even or odd
+//  * - what the number plus 100 is
+//  * - if the number is negative or positive
+//  *
+//  * Do *NOT* display any of the above information
+//  * if the user enters a value that is not of the number data type.
+//  * Instead, use an alert to inform them of the incorrect input data type.
+//  *
+//  *
+//  * Can you refactor your code to use functions?
+//  * HINT: The way we prompt for a value could be improved
+//  */
+
+const userContinue = confirm("Do you want to enter a number?");
+
+if(userContinue) {
+    const userNumber = prompt("Enter a number");
+    const isEven = userNumber % 2 === 0;
+
+    alert(`${userNumber} is ${isEven ? `even` : `odd`}`);
+
+
+}
