@@ -231,10 +231,17 @@ alert(`The price after discount is $${totalAfterDiscount}`)
 const userContinue = confirm("Do you want to enter a number?");
 
 if(userContinue) {
-    const userNumber = prompt("Enter a number");
+    const userNumber = 1* prompt("Enter a number");
     const isEven = userNumber % 2 === 0;
-
-    alert(`${userNumber} is ${isEven ? `even` : `odd`}`);
-
-
 }
+
+//     alert(`${userNumber} is ${isEven ? `even` : `odd`}`);
+//
+// const numPlus100 = userNumber + 100;
+// alert(`${userNumber} + 100 = ${numPlus100}`);
+//
+// constisPositive = userNumber >= 0;
+// alert(`${userNumber} is ${isPositive ? 'positive' : 'negative'}`);
+// } else {
+//     alert("You didn't enter a valid number");
+// }
