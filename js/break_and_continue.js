@@ -1,4 +1,4 @@
-// // // console.log("hello from break and continue!");
+// // console.log("hello from break and continue!");
 // //
 // // while (true) {
 // //     let userInput = prompt("Enter an odd number between 1 and 50:");
@@ -10,13 +10,13 @@
 // //     }
 // // }
 // //
-// // console.log("You entered a valid odd number: " + `number`);
-//
+// console.log("You entered a valid odd number: " + `number`);
+// //
 // let userInput = prompt("Enter an odd number between 1 and 50:");
 // let userNumber = parseInt(userInput);
 // if (userNumber >= 1 && userNumber <= 50 && userNumber % 2 !==0) {
 //     for (let i = 1; i <= 50; i +=2) {
-//         if (i === userNumber) {
+//         if (i == userNumber) {
 //             continue;
 //         }
 //         console.log(i);
