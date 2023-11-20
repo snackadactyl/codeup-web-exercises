@@ -1,4 +1,4 @@
-console.log("Inside planets.js");
+console.log("Inside planets-array.js");
 
 (function(){
     "use strict";
