@@ -10,12 +10,14 @@
 
 <script>
   document.write("This is inline JS!")
-  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+  let months = ['Month', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
   'November', 'December'];
 
   let myBirthday = new Date(1988, 11, 20);
+  console.log(myBirthday);
 
-  let formattedBirthday = `${months[myBirthday.getMonth()]} ${myBirthday.getDate()}, ${jsBirthday.getFullYear()}`;
+  let formattedBirthday = `${months[myBirthday.getMonth()]} ${myBirthday.getDate()}, ${myBirthday.getFullYear()}`;
+  console.log(formattedBirthday);
 
   console.log('Yay! It is your birthday using JS!:', formattedBirthday);
 </script>
