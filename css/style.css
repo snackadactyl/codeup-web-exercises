@@ -4,7 +4,15 @@ line
 comment
 */
 
-.fancy-header {
-    color: #5454c0; /* single line comment */
-    text-decoration: underline;
+h1 {
+    color: blue;
+    background-color: lightseagreen;
+}
+
+h2 {
+    color: purple;
+}
+
+div {
+    color: green;
 }
