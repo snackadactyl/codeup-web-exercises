@@ -1,19 +1,82 @@
-/*
-multi
-line
-comment
-*/
-
 h1 {
-    text-align: center;
-    color: blue;
-    background-color: lightseagreen;
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
 }
 
-h2 {
-    color: purple;
+/*  selector for all "h1" elements
+    that are a descendent of id="container"
+    and have a class of "fancy-header" */
+h1, h2 {
+    color: blue;
+    text-decoration: underline;
 }
 
 div {
-    color: green;
+    color: #200f93;
+    font-weight: bold;
+    font-size: large;
 }
+/* selector for all "em" elements */
+body {
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    background-image: url('https://t3.ftcdn.net/jpg/04/04/19/56/360_F_404195637_8ytNPsQYN2JQqALtPEld7jkbA1M8LbfJ.jpg'); /* Replace with the path to your image */
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust as needed, options include: cover, contain, etc. */
+
+    cursor: url('../img/heartcursor.png') 16 16, auto;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+}
+
+ul li::before {
+    content: "\1F60D"; /* Unicode character for a cute icon */
+    margin-right: 8px; /* Adjust spacing between the icon and the text */
+}
+
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th {
+    background-color: #f0f100f0;
+    padding: 10px;
+    text-align: left;
+    border: 5px solid #331ec0;
+}
+
+td {
+    padding: 10px;
+    border: 5px dotted #331ec0;
+}
+
+/* Style for normal (link) state */
+a {
+    color: #3498db; /* Change to your preferred link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+/* Style for visited state */
+a:visited {
+    color: #8e44ad; /* Change to your preferred visited link color */
+}
+
+/* Style for hover state */
+a:hover {
+    color: #e74c3c; /* Change to your preferred hover link color */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for active state (when clicked) */
+a:active {
+    color: #2ecc71; /* Change to your preferred active link color */
+}
+
