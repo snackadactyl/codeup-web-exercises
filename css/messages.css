@@ -1,14 +1,14 @@
-:root {
-    --bg-info: rgba(8, 96, 229, 0.28);
-    --text-info:rgba(229, 194, 16, 0.28);
-    --bg-success: rgba(23, 185, 45, 0.28);
-    --text-success: rgba(220, 23, 23, 0.28);
-    --bg-warning:
-    --text-warning: ;
-    --bg-error: ;
-    --text-error: ;
+/*:root {*/
+/*    --bg-info: rgba(8, 96, 229, 0.28);*/
+/*    --text-info:rgba(229, 194, 16, 0.28);*/
+/*    --bg-success: rgba(23, 185, 45, 0.28);*/
+/*    --text-success: rgba(220, 23, 23, 0.28);*/
+/*    --bg-warning:*/
+/*    --text-warning: ;*/
+/*    --bg-error: ;*/
+/*    --text-error: ;*/
 
-}
+/*}*/
 
 body, html {
     height: 100%;
