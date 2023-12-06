@@ -2,21 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox Fundamentals</title>
-  <link rel="stylesheet" href="css/flexbox_fundamentals.css">
+    <title>Z-Index Example</title>
+
+    <!-- Z-Index -->
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            /*transform: rotate(45deg);*/
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: blue;
+        }
+        .box3 {
+            background-color: green;
+        }
+    </style>
+
+    <!-- Positioning -->
+    <!--    <style>-->
+    <!--        #container {-->
+    <!--            margin: 50px auto;-->
+    <!--            width: 500px;-->
+    <!--            height: 200px;-->
+    <!--            border: 1px solid #000;-->
+    <!--        }-->
+    <!--        .box {-->
+    <!--            background-color: #1969B2;-->
+    <!--            height: 100px;-->
+    <!--            width: 100px;-->
+    <!--        }-->
+    <!--    </style>-->
 
 </head>
 <body>
 
-<h1>Flex Fundamentals</h1>
-
-
-<div class="flex-container">
-  <div class="flex-item">Item 1</div>
-  <div class="flex-item">Item 2</div>
-  <div class="flex-item">Item 3</div>
+<!-- Z-index -->
+<div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
 </div>
 
+<!-- Positioning -->
+<!--<div id="container">-->
+<!--    <div class="box"></div>-->
+<!--</div>-->
 
 </body>
 </html>
