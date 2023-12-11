@@ -1,0 +1,15 @@
+* { box-sizing: border-box;}
+
+#main-container {
+    background-image: url("../img/pizza.png");
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+}
+
+h1 {
+    width: 100%;
+    background-position: center;
+    background-color: #ffffffab;
+}
